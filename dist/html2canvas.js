@@ -2484,7 +2484,7 @@ module.exports = LinearGradientContainer;
 },{"./color":5,"./gradientcontainer":11}],15:[function(require,module,exports){
 module.exports = function() {
     if (window.html2canvas.logging && window.console && window.console.log) {
-    	window.html2canvas.logmessage = [].slice.call(arguments, 0);
+    	window.html2canvas.logmessage = String.prototype.call(arguments, 0);
         Function.prototype.bind.call(window.console.log, (window.console)).apply(window.console, [(Date.now() - window.html2canvas.start) + "ms", "html2canvas:"].concat([].slice.call(arguments, 0)));
     }
 };
